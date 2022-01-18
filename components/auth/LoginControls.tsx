@@ -1,5 +1,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { Button } from '@mui/material';
+import {
+  Avatar, Button, IconButton, Tooltip,
+} from '@mui/material';
 import React from 'react';
 
 const LoginControls = () => {
@@ -15,8 +17,17 @@ const LoginControls = () => {
     signIn();
   };
 
-  if (session) {
-    return <Button color="inherit" onClick={handleSignout}>Sign out</Button>;
+  if (session && session.user) {
+    const name = session.user.name || 'No name';
+    const avatarImage = session.user.image || undefined;
+
+    return (
+      <Tooltip title="Sign Out">
+        <IconButton onClick={handleSignout} sx={{ p: 0 }}>
+          <Avatar alt={name} src={avatarImage} />
+        </IconButton>
+      </Tooltip>
+    );
   }
 
   return <Button color="inherit" onClick={handleSignin}>Sign in</Button>;
