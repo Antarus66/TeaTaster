@@ -1,7 +1,8 @@
 import {
-  AppBar, Button, IconButton, Toolbar, Typography,
+  AppBar, IconButton, Toolbar, Typography,
 } from '@mui/material';
 import GrassIcon from '@mui/icons-material/Grass';
+import LoginControls from './auth/LoginControls';
 
 const Header = () => (
     <AppBar position="sticky">
@@ -18,7 +19,7 @@ const Header = () => (
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Tea Taster
         </Typography>
-        <Button color="inherit">Login</Button>
+        <LoginControls />
       </Toolbar>
     </AppBar>
 );

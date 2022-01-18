@@ -1,4 +1,5 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
+import { getSession } from 'next-auth/react';
 import Layout from '../components/Layout';
 
 const Home: NextPage = () => {
@@ -14,5 +15,11 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => ({
+  props: {
+    session: await getSession(ctx),
+  },
+});
 
 export default Home;
