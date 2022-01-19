@@ -1,17 +1,14 @@
 import { Avatar } from '@mui/material';
 import React from 'react';
 import styles from './ProfileCard.module.css';
+import User from './User';
 
 interface ProfileCardProps {
-  user: { // todo: move out
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-  }
+  user: User
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
-  const name = user.name || 'Unknown user';
+  const name = user.name || 'Noname';
   const image = user.image || undefined; // The MUI Avatar doesn't accept null
 
   return (
