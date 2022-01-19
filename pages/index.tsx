@@ -1,5 +1,7 @@
 import type { GetServerSideProps, NextPage } from 'next';
 import { getSession } from 'next-auth/react';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 
 const Home: NextPage = () => {
@@ -8,9 +10,16 @@ const Home: NextPage = () => {
   const longLoremIpsum = loremIpsum.repeat(loremIpsumNumber);
   const placeholder = <p>{longLoremIpsum}</p>;
 
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('ua');
+  });
+
   return (
     <Layout>
       <h1>Hello world!!!</h1>
+      <h2>{t('hi')}</h2>
       {placeholder}
     </Layout>
   );
