@@ -3,16 +3,23 @@ import {
   Avatar, Button, IconButton, Tooltip,
 } from '@mui/material';
 import React from 'react';
+import ProfileMenu from './ProfileMenu';
 
 const LoginControls = () => {
   const { data: session } = useSession();
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-  const handleSignout = (event: React.MouseEvent) => {
-    event.preventDefault();
-    signOut();
+  const handleOpenProfileMenu = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setAnchorElUser(e.currentTarget);
   };
 
-  const handleSignin = (event: React.MouseEvent) => {
+  const handleCloseProfileMenu = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setAnchorElUser(null);
+  };
+
+  const handleSignin = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     signIn();
   };
@@ -22,11 +29,14 @@ const LoginControls = () => {
     const avatarImage = session.user.image || undefined;
 
     return (
-      <Tooltip title="Sign Out">
-        <IconButton onClick={handleSignout} sx={{ p: 0 }}>
-          <Avatar alt={name} src={avatarImage} />
-        </IconButton>
-      </Tooltip>
+      <>
+        <Tooltip title="Profile menu">
+          <IconButton onClick={handleOpenProfileMenu} sx={{ p: 0 }}>
+            <Avatar alt={name} src={avatarImage} />
+          </IconButton>
+        </Tooltip>
+        <ProfileMenu anchorEl={anchorElUser} onClose={handleCloseProfileMenu}/>
+      </>
     );
   }
 

@@ -29,6 +29,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "no-unused-vars": "off"
   }
 }
