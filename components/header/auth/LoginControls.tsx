@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import ProfileMenu from './ProfileMenu';
 import ProfileCard from './ProfileCard';
 
-const LoginControls = () => {
+const LoginControls: React.FC<{className: string}> = ({ className }) => {
   const { data: session } = useSession();
   const { t } = useTranslation();
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -33,7 +33,7 @@ const LoginControls = () => {
 
     return (
       <>
-        <Tooltip title={t('navbar.profile-menu') as string}>
+        <Tooltip className={className} title={t('navbar.profile-menu') as string}>
           <IconButton onClick={handleOpenProfileMenu} sx={{ p: 0 }}>
             <Avatar alt={name} src={avatarImage} />
           </IconButton>

@@ -3,6 +3,8 @@ import {
 } from '@mui/material';
 import GrassIcon from '@mui/icons-material/Grass';
 import LoginControls from './auth/LoginControls';
+import LangControls from './LangControls';
+import styles from './Header.module.css';
 
 const Header = () => (
     <AppBar position="sticky">
@@ -19,7 +21,8 @@ const Header = () => (
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Tea Taster
         </Typography>
-        <LoginControls />
+        <LangControls />
+        <LoginControls className={styles.loginControls} />
       </Toolbar>
     </AppBar>
 );
