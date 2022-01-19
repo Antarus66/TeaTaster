@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@mui/material';
-import Header from './Header';
+import Header from './header/Header';
 
 export interface LayoutProps {
   example?: null
