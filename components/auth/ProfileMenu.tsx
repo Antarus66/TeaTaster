@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, MenuItem, Typography } from '@mui/material';
 import { signOut } from 'next-auth/react';
+import { useTranslation } from 'react-i18next';
 
 interface ProfileMenuProps {
   anchorEl: Element | null,
@@ -9,6 +10,8 @@ interface ProfileMenuProps {
 }
 
 const ProfileMenu: React.FC<ProfileMenuProps> = ({ anchorEl, onClose, UserCard }) => {
+  const { t } = useTranslation();
+
   const handleSignout = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     signOut();
@@ -34,7 +37,7 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({ anchorEl, onClose, UserCard }
     >
       {UserCard}
       <MenuItem>
-        <Typography textAlign="center" onClick={handleSignout}>Sign out</Typography>
+        <Typography textAlign="center" onClick={handleSignout}>{t('navbar.signout')}</Typography>
       </MenuItem>
     </Menu>
   );

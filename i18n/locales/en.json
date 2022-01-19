@@ -1,3 +1,9 @@
 {
-  "hi": "Hello world!"
+  "hello-world": "Hello world!",
+  "navbar": {
+    "profile-menu": "Profile menu",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "noname": "A stranger"
+  }
 }

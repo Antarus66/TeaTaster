@@ -14,12 +14,11 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     i18n.changeLanguage('ua');
-  });
+  }, []);
 
   return (
     <Layout>
-      <h1>Hello world!!!</h1>
-      <h2>{t('hi')}</h2>
+      <h1>{t('hello-world')}</h1>
       {placeholder}
     </Layout>
   );

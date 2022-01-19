@@ -3,11 +3,13 @@ import {
   Avatar, Button, IconButton, Tooltip,
 } from '@mui/material';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ProfileMenu from './ProfileMenu';
 import ProfileCard from './ProfileCard';
 
 const LoginControls = () => {
   const { data: session } = useSession();
+  const { t } = useTranslation();
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenProfileMenu = (e: React.MouseEvent<HTMLElement>) => {
@@ -26,12 +28,12 @@ const LoginControls = () => {
   };
 
   if (session && session.user) {
-    const name = session.user.name || 'No name';
+    const name = session.user.name || (t('navbar.noname') as string);
     const avatarImage = session.user.image || undefined;
 
     return (
       <>
-        <Tooltip title="Profile menu">
+        <Tooltip title={t('navbar.profile-menu') as string}>
           <IconButton onClick={handleOpenProfileMenu} sx={{ p: 0 }}>
             <Avatar alt={name} src={avatarImage} />
           </IconButton>
@@ -43,7 +45,7 @@ const LoginControls = () => {
     );
   }
 
-  return <Button color="inherit" onClick={handleSignin}>Sign in</Button>;
+  return <Button color="inherit" onClick={handleSignin}>{ t('navbar.signin') }</Button>;
 };
 
 export default LoginControls;
