@@ -4,6 +4,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 import ProfileMenu from './ProfileMenu';
+import ProfileCard from './ProfileCard';
 
 const LoginControls = () => {
   const { data: session } = useSession();
@@ -35,7 +36,9 @@ const LoginControls = () => {
             <Avatar alt={name} src={avatarImage} />
           </IconButton>
         </Tooltip>
-        <ProfileMenu anchorEl={anchorElUser} onClose={handleCloseProfileMenu}/>
+        <ProfileMenu anchorEl={anchorElUser}
+                     onClose={handleCloseProfileMenu}
+                     UserCard={<ProfileCard user={session.user}/>} />
       </>
     );
   }

@@ -5,9 +5,10 @@ import { signOut } from 'next-auth/react';
 interface ProfileMenuProps {
   anchorEl: Element | null,
   onClose: (e: React.MouseEvent<HTMLElement>) => void,
+  UserCard: React.ReactNode,
 }
 
-const ProfileMenu: React.FC<ProfileMenuProps> = ({ anchorEl, onClose }) => {
+const ProfileMenu: React.FC<ProfileMenuProps> = ({ anchorEl, onClose, UserCard }) => {
   const handleSignout = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     signOut();
@@ -31,6 +32,7 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({ anchorEl, onClose }) => {
       open={Boolean(anchorEl)}
       onClose={onClose}
     >
+      {UserCard}
       <MenuItem>
         <Typography textAlign="center" onClick={handleSignout}>Sign out</Typography>
       </MenuItem>
