@@ -4,24 +4,26 @@ import * as d3 from 'd3';
 import { RGBColor } from 'd3-color';
 import data from './d3-data.json';
 import styles from './AromaCircle.module.css';
+import { Aroma } from './AromaSchema';
 
 interface AromaCircleProps {
-  width: number
+  width: number;
+  onPick: (aroma: Aroma) => void;
 }
 
-const AromaCircle: React.FC<AromaCircleProps> = ({ width }) => {
+const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick }) => {
   const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (chartRef.current !== null) {
-      createChart(chartRef.current, width);
+      createChart(chartRef.current, width, onPick);
     }
   }, []);
 
   return <div className={styles.chartAnchor} ref={chartRef}/>;
 };
 
-function createChart(anchor: HTMLDivElement, width: number) {
+function createChart(anchor: HTMLDivElement, width: number, onPick: (aroma: Aroma) => void) {
   const myChart = Sunburst();
 
   myChart.data(data)
@@ -41,7 +43,9 @@ function createChart(anchor: HTMLDivElement, width: number) {
         return;
       }
 
-      console.log(node.name);
+      onPick({
+        name: node.name as string,
+      });
     })
     .width(width)
     .height(width)(anchor);

@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Sunburst diagram */
+.sunburst-viz .radial-label .text-contour {
+  display: none;
+}
+
+.sunburst-viz .radial-label .text-stroke {
+  fill: white;
+  font-size: 14px;
+}
