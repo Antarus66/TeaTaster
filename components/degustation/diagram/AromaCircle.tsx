@@ -29,6 +29,8 @@ function createChart(anchor: HTMLDivElement, width: number) {
     .radiusScaleExponent(1.7)
     .labelOrientation('radial')
     .color(findNodeColor)
+    // @ts-ignore - forcing the same segments size for leafs
+    .size((node: Node): number | null => (node.children?.length ? null : 1))
     .onClick((node: Node) => {
       if (!node) {
         return;

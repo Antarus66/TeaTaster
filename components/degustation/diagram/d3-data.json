@@ -6,20 +6,16 @@
       "color": "red",
       "children": [
         {
-          "name": "AgglomerativeCluster",
-          "value": 1
+          "name": "AgglomerativeCluster"
         },
         {
-          "name": "CommunityStructure",
-          "value": 1
+          "name": "CommunityStructure"
         },
         {
-          "name": "HierarchicalCluster",
-          "value": 1
+          "name": "HierarchicalCluster"
         },
         {
-          "name": "MergeEdge",
-          "value": 1
+          "name": "MergeEdge"
         }
       ]
     },
@@ -28,24 +24,19 @@
       "color": "blue",
       "children": [
         {
-          "name": "BetweennessCentrality",
-          "value": 1
+          "name": "BetweennessCentrality"
         },
         {
-          "name": "LinkDistance",
-          "value": 1
+          "name": "LinkDistance"
         },
         {
-          "name": "MaxFlowMinCut",
-          "value": 1
+          "name": "MaxFlowMinCut"
         },
         {
-          "name": "ShortestPaths",
-          "value": 1
+          "name": "ShortestPaths"
         },
         {
-          "name": "SpanningTree",
-          "value": 1
+          "name": "SpanningTree"
         }
       ]
     }
