@@ -13,17 +13,14 @@ const LoginControls: React.FC<{className: string}> = ({ className }) => {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenProfileMenu = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
     setAnchorElUser(e.currentTarget);
   };
 
   const handleCloseProfileMenu = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
     setAnchorElUser(null);
   };
 
   const handleSignin = (event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault();
     signIn();
   };
 

@@ -4,6 +4,11 @@
     "profile-menu": "Меню профіля",
     "signin": "Увійти",
     "signout": "Вийти",
-    "noname": "Незнайомець"
+    "noname": "Незнайомець",
+    "change-language": "Змінити мову"
+  },
+  "degustation": {
+    "no-degustations": "В вас ще немає дегустацій",
+    "start-degustation": "Почати дегустацію"
   }
 }

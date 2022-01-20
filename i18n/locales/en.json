@@ -4,6 +4,11 @@
     "profile-menu": "Profile menu",
     "signin": "Sign in",
     "signout": "Sign out",
-    "noname": "A stranger"
+    "noname": "A stranger",
+    "change-language": "Switch language"
+  },
+  "degustation": {
+    "no-degustations": "You have no degustations yet",
+    "start-degustation": "Start a degustation"
   }
 }
