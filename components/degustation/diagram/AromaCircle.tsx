@@ -12,7 +12,17 @@ const AromaCircle: React.FC = () => {
 
     if (chartRef.current !== null) {
       myChart.data(data)
-        .width(width)
+        .excludeRoot(true)
+        .radiusScaleExponent(1.7)
+        .labelOrientation('radial')
+        .color((d) => {
+          if (d.color) {
+            return d.color;
+          }
+
+          return 'lightgrey';
+        })
+        .width(width) // todo: move out to props
         .height(width)(chartRef.current);
     }
   }, []);
