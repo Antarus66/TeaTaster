@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Sunburst, { Node } from 'sunburst-chart';
 import * as d3 from 'd3';
 import { RGBColor } from 'd3-color';
+import { useTranslation } from 'react-i18next';
 import styles from './AromaCircle.module.css';
 import { Aroma, AromaSchema } from './Aroma';
 
@@ -13,12 +14,14 @@ interface AromaCircleProps {
 
 const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, schema }) => {
   const chartRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (chartRef.current !== null) {
-      createChart(schema, chartRef.current, width, onPick);
+      chartRef.current.innerHTML = '';
+      createChart(schema, chartRef.current, width, onPick, t);
     }
-  }, []);
+  });
 
   return <div className={styles.chartAnchor} ref={chartRef}/>;
 };
@@ -28,6 +31,7 @@ function createChart(
   anchor: HTMLDivElement,
   width: number,
   onPick: (aroma: Aroma) => void,
+  t: any, // todo: mode in
 ) {
   const myChart = Sunburst();
 
@@ -36,6 +40,7 @@ function createChart(
     .radiusScaleExponent(1.7)
     .labelOrientation('radial')
     .color(findNodeColor)
+    .label((node: Node) => t(`aromas.${node.name}`))
     .maxLevels(2)
     // @ts-ignore - forcing the same segments size for leafs
     .size((node: Node): number | null => (node.children?.length ? null : 1))

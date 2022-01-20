@@ -10,5 +10,8 @@
   "degustation": {
     "no-degustations": "В вас ще немає дегустацій",
     "start-degustation": "Почати дегустацію"
+  },
+  "aromas": {
+    "chemical": "Хімія"
   }
 }

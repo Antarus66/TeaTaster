@@ -10,5 +10,8 @@
   "degustation": {
     "no-degustations": "You have no degustations yet",
     "start-degustation": "Start a degustation"
+  },
+  "aromas": {
+    "chemical": "Chemical"
   }
 }
