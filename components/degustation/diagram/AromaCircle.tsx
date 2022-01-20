@@ -36,6 +36,7 @@ function createChart(
     .radiusScaleExponent(1.7)
     .labelOrientation('radial')
     .color(findNodeColor)
+    .maxLevels(2)
     // @ts-ignore - forcing the same segments size for leafs
     .size((node: Node): number | null => (node.children?.length ? null : 1))
     .onClick(nodeClickHandler)

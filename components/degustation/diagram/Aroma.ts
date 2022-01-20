@@ -4,8 +4,8 @@ export interface Aroma {
 
 interface CompositeAromaSchema<LeafType> {
   name: string;
-  color: string;
   children: Array<CompositeAromaSchema<LeafType> | LeafType>;
+  color?: string;
 }
 
 export type AromaSchema = CompositeAromaSchema<Aroma>;

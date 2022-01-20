@@ -1,0 +1,114 @@
+{
+  "name": "standard-aroma-schema",
+  "color": "lightgrey",
+  "children": [
+    {
+      "name": "chemical",
+      "color": "lightgrey",
+      "children": [
+        {
+          "name": "soap"
+        },
+        {
+          "name": "alcohol"
+        },
+        {
+          "name": "rubber"
+        },
+        {
+          "name": "meds"
+        },
+        {
+          "name": "machine-oil"
+        }
+      ]
+    },
+    {
+      "name": "sweets",
+      "color": "lightgrey",
+      "children": [
+        {
+          "name": "saccharine",
+          "color": "lightgrey",
+          "children": [
+            {
+              "name": "malt"
+            },
+            {
+              "name": "caramel"
+            },
+            {
+              "name": "salted-caramel"
+            },
+            {
+              "name": "burnt-sugar"
+            },
+            {
+              "name": "rice-porridge"
+            }
+          ]
+        },
+        {
+          "name": "lactic",
+          "color": "lightgrey",
+          "children": [
+            {
+              "name": "butter"
+            },
+            {
+              "name": "cream"
+            },
+            {
+              "name": "ice-cream"
+            },
+            {
+              "name": "boiled-milk"
+            },
+            {
+              "name": "ran-over-milk"
+            }
+          ]
+        },
+        {
+          "name": "coffee"
+        },
+        {
+          "name": "cocoa",
+          "color": "lightgrey",
+          "children": [
+            {
+              "name": "milk chocolate"
+            },
+            {
+              "name": "dark chocolate"
+            },
+            {
+              "name": "sugar"
+            }
+          ]
+        },
+        {
+          "name": "bread",
+          "color": "lightgrey",
+          "children": [
+            {
+              "name": "bread-crust"
+            },
+            {
+              "name": "brown-bread"
+            },
+            {
+              "name": "sponge-cake"
+            }
+          ]
+        },
+        {
+          "name": "light-honey"
+        },
+        {
+          "name": "dark-honey"
+        }
+      ]
+    }
+  ]
+}
