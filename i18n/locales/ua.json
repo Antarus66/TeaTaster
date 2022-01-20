@@ -12,6 +12,34 @@
     "start-degustation": "Почати дегустацію"
   },
   "aromas": {
-    "chemical": "Хімія"
+    "chemical": "Хімія",
+    "soap": "Мило",
+    "alcohol": "Спирт",
+    "rubber": "Резина",
+    "meds": "Ліки",
+    "machine-oil": "Машинне масло",
+    "sweets": "Солодощі",
+    "saccharine": "Цукрові",
+    "malt": "Солод",
+    "caramel": "Карамель",
+    "salted-caramel": "Солона карамель",
+    "burnt-sugar": "Палений цукор",
+    "rice-porridge": "Рисова каша",
+    "lactic": "Молочні",
+    "butter": "Вершкове масло",
+    "cream": "Вершки",
+    "ice-cream": "Пломбір",
+    "boiled-milk": "Кип'ячене молоко",
+    "ran-over-milk": "Збігле молоко",
+    "coffee": "Кава",
+    "cocoa": "Какао",
+    "milk chocolate": "Молочний шоколад",
+    "dark chocolate": "Чорний шоколад",
+    "bread": "Хлібні",
+    "bread-crust": "Хлібна скоринка",
+    "brown-bread": "Чорний хліб",
+    "sponge-cake": "Бісквіт",
+    "light-honey": "Світлий мед",
+    "dark-honey": "Темний мед"
   }
 }

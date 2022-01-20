@@ -12,6 +12,34 @@
     "start-degustation": "Start a degustation"
   },
   "aromas": {
-    "chemical": "Chemical"
+    "chemical": "Chemical",
+    "soap": "Soap",
+    "alcohol": "Alcohol",
+    "rubber": "Rubber",
+    "meds": "Meds",
+    "machine-oil": "Machine oil",
+    "sweets": "Sweets",
+    "saccharine": "Saccharine",
+    "malt": "Malt",
+    "caramel": "Caramel",
+    "salted-caramel": "Salted caramel",
+    "burnt-sugar": "Burnt sugar",
+    "rice-porridge": "Rice porridge",
+    "lactic": "Lactic",
+    "butter": "Butter",
+    "cream": "Cream",
+    "ice-cream": "Ice cream",
+    "boiled-milk": "Boiled milk",
+    "ran-over-milk": "Ran over milk",
+    "coffee": "Coffee",
+    "cocoa": "Cocoa",
+    "milk chocolate": "Milk chocolate",
+    "dark chocolate": "Dark chocolate",
+    "bread": "Bread",
+    "bread-crust": "Bread crust",
+    "brown-bread": "Brown bread",
+    "sponge-cake": "Sponge cake",
+    "light-honey": "Light honey",
+    "dark-honey": "Dark honey"
   }
 }
