@@ -1,42 +1,37 @@
 {
-  "name": "flare",
+  "name": "standard-schema",
+  "color": "lightgrey",
   "children": [
     {
-      "name": "cluster",
-      "color": "red",
+      "name": "fruits",
+      "color": "#fb8171",
       "children": [
         {
-          "name": "AgglomerativeCluster"
+          "name": "apple"
         },
         {
-          "name": "CommunityStructure"
+          "name": "lemon"
         },
         {
-          "name": "HierarchicalCluster"
+          "name": "lime"
         },
         {
-          "name": "MergeEdge"
+          "name": "cherry"
         }
       ]
     },
     {
-      "name": "graph",
-      "color": "blue",
+      "name": "vegetables",
+      "color": "gold",
       "children": [
         {
-          "name": "BetweennessCentrality"
+          "name": "greens"
         },
         {
-          "name": "LinkDistance"
+          "name": "potatos"
         },
         {
-          "name": "MaxFlowMinCut"
-        },
-        {
-          "name": "ShortestPaths"
-        },
-        {
-          "name": "SpanningTree"
+          "name": "carrot"
         }
       ]
     }
