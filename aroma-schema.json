@@ -4,7 +4,7 @@
   "children": [
     {
       "name": "chemical",
-      "color": "lightgrey",
+      "color": "#f78951",
       "children": [
         {
           "name": "soap"
@@ -25,11 +25,10 @@
     },
     {
       "name": "sweets",
-      "color": "lightgrey",
+      "color": "#e35449",
       "children": [
         {
           "name": "saccharine",
-          "color": "lightgrey",
           "children": [
             {
               "name": "malt"
@@ -50,7 +49,6 @@
         },
         {
           "name": "lactic",
-          "color": "lightgrey",
           "children": [
             {
               "name": "butter"
@@ -74,7 +72,6 @@
         },
         {
           "name": "cocoa",
-          "color": "lightgrey",
           "children": [
             {
               "name": "milk chocolate"
@@ -86,7 +83,6 @@
         },
         {
           "name": "bread",
-          "color": "lightgrey",
           "children": [
             {
               "name": "bread-crust"
@@ -104,6 +100,162 @@
         },
         {
           "name": "dark-honey"
+        }
+      ]
+    },
+    {
+      "name": "oxide",
+      "color": "#cb9b43",
+      "children": [
+        {
+          "name": "skin"
+        },
+        {
+          "name": "barn"
+        },
+        {
+          "name": "mildew"
+        },
+        {
+          "name": "fermentation"
+        },
+        {
+          "name": "metal"
+        }
+      ]
+    },
+    {
+      "name": "sea",
+      "color": "#4da3b1",
+      "children": [
+        {
+          "name": "fish"
+        },
+        {
+          "name": "algae"
+        },
+        {
+          "name": "salt"
+        }
+      ]
+    },
+    {
+      "name": "air",
+      "color": "#89c4cb",
+      "children": [
+        {
+          "name": "wind"
+        },
+        {
+          "name": "wet-asphalt"
+        },
+        {
+          "name": "snow-peak"
+        },
+        {
+          "name": "field-fog"
+        },
+        {
+          "name": "forest-fog"
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "color": "#ad8f81",
+      "children": [
+        {
+          "name": "paper"
+        },
+        {
+          "name": "tar"
+        },
+        {
+          "name": "resin"
+        },
+        {
+          "name": "needle"
+        },
+        {
+          "name": "eucalyptus"
+        },
+        {
+          "name": "sandal"
+        },
+        {
+          "name": "steamed-bath"
+        },
+        {
+          "name": "oak-barrel"
+        },
+        {
+          "name": "wet-wood"
+        },
+        {
+          "name": "heated-wood"
+        },
+        {
+          "name": "fresh-log"
+        }
+      ]
+    },
+    {
+      "name": "plant",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "earthy",
+          "children": [
+            {
+              "name":  "sand"
+            },
+            {
+              "name":  "raw-earth"
+            },
+            {
+              "name":  "lime"
+            },
+            {
+              "name":  "dust"
+            }
+          ]
+        },
+        {
+          "name": "forest",
+          "children": [
+            {
+              "name":  "coal"
+            },
+            {
+              "name":  "ash"
+            },
+            {
+              "name":  "fireplace"
+            },
+            {
+              "name":  "moss"
+            },
+            {
+              "name":  "mushrooms"
+            }
+          ]
+        },
+        {
+          "name": "herbaceous",
+          "children": [
+            {
+              "name":  "mown-grass"
+            },
+            {
+              "name":  "bamboo"
+            },
+            {
+              "name":  "leaves"
+            },
+            {
+              "name":  "straw"
+            }
+          ]
         }
       ]
     }

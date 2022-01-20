@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { Aroma } from '../components/degustation/diagram/Aroma';
+import { Aroma, AromaSchema } from '../components/degustation/diagram/Aroma';
 // import data from '../components/degustation/diagram/d3-data.json';
 import aromaAchema from '../aroma-schema.json';
 

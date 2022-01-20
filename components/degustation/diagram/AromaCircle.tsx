@@ -72,7 +72,12 @@ function findNodeColor(node: Node) {
   if (node.__dataNode?.parent) {
     const parentColor: string = findNodeColor(node.__dataNode.parent.data);
     const d3ParentColor = d3.color(parentColor) as RGBColor;
-    d3ParentColor.opacity = 0.6;
+
+    if (node.children?.length) {
+      d3ParentColor.opacity = 0.8;
+    } else {
+      d3ParentColor.opacity = 0.6;
+    }
 
     return d3ParentColor.toString();
   }

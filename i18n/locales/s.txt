@@ -1,0 +1,45 @@
+Oxide
+Skin
+Barn
+Mildew
+Fermentation
+Metal
+Sea
+Fish
+    Algae
+Salt
+Air
+    Wind
+Wet asphalt
+Snow-capped peak
+Field fog
+Forest fog
+Tree
+Paper
+Tar
+Resin
+Needle
+    Eucalyptus
+Sandal
+Steamed bath
+Oak barrel
+Wet wood
+Heated wood
+Fresh log house
+Plant and derivatives
+Earthy
+Sand
+Raw earth
+Lime
+Dust
+Forest
+Coal
+Ash
+Fireplace
+Moss
+Mushrooms
+Herbaceous
+Freshly mown grass
+Bamboo
+Fallen leaves
+Hay / Straw
