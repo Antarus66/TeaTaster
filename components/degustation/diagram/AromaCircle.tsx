@@ -19,50 +19,47 @@ const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, schema }) => {
   useEffect(() => {
     if (chartRef.current !== null) {
       chartRef.current.innerHTML = '';
-      createChart(schema, chartRef.current, width, onPick, t);
+      createChart(chartRef.current);
     }
   });
 
-  return <div className={styles.chartAnchor} ref={chartRef}/>;
-};
+  function createChart(
+    anchor: HTMLDivElement,
+  ) {
+    const myChart = Sunburst();
 
-function createChart(
-  schema: AromaSchema,
-  anchor: HTMLDivElement,
-  width: number,
-  onPick: (aroma: Aroma) => void,
-  t: any, // todo: mode in
-) {
-  const myChart = Sunburst();
+    myChart.data(schema as Node)
+      .excludeRoot(true)
+      .radiusScaleExponent(1.2)
+      .labelOrientation('radial')
+      .color(findNodeColor)
+      .label((node: Node) => t(`aromas.${node.name}`))
+      .maxLevels(2)
+      // @ts-ignore - forcing the same segments size for leafs
+      .size((node: Node): number | null => (node.children?.length ? null : 1))
+      .onClick(nodeClickHandler)
+      .width(width)
+      .height(width)(anchor);
 
-  myChart.data(schema as Node)
-    .excludeRoot(true)
-    .radiusScaleExponent(1.7)
-    .labelOrientation('radial')
-    .color(findNodeColor)
-    .label((node: Node) => t(`aromas.${node.name}`))
-    .maxLevels(2)
-    // @ts-ignore - forcing the same segments size for leafs
-    .size((node: Node): number | null => (node.children?.length ? null : 1))
-    .onClick(nodeClickHandler)
-    .width(width)
-    .height(width)(anchor);
+    function nodeClickHandler(node: Node) {
+      if (!node) {
+        return;
+      }
 
-  function nodeClickHandler(node: Node) {
-    if (!node) {
-      return;
+      // zoom only on parent nodes
+      if (node.children?.length) {
+        myChart.focusOnNode(node);
+        return;
+      }
+
+      onPick({
+        name: node.name as string,
+      });
     }
-
-    if (node.children?.length) {
-      myChart.focusOnNode(node);
-      return;
-    }
-
-    onPick({
-      name: node.name as string,
-    });
   }
-}
+
+  return <div className={styles.chartAnchor} ref={chartRef} style={{ width }}/>;
+};
 
 function findNodeColor(node: Node) {
   if (node.color) {

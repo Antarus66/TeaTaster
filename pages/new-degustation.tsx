@@ -11,7 +11,7 @@ const NewDegustation: NextPage = () => {
     console.log(aroma.name);
   };
 
-  return <AromaCircle schema={aromaAchema} width={900} onPick={handlePickAroma}/>;
+  return <AromaCircle schema={aromaAchema} width={700} onPick={handlePickAroma}/>;
 };
 
 export default NewDegustation;

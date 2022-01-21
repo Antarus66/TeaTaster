@@ -1,5 +1,17 @@
 .chartAnchor {
-  width: 950px;
   margin: auto;
   padding: 25px;
+}
+
+.chartAnchor svg {
+  overflow: visible;
+}
+
+.chartAnchor :global(.text-contour) {
+  display: none;
+}
+
+.chartAnchor :global(.text-stroke) {
+  fill: white;
+  font-size: 14px;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "standard-aroma-schema",
-  "color": "lightgrey",
+  "name": "",
+  "color": "white",
   "children": [
     {
       "name": "berries",
