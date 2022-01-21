@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Snackbar } from '@mui/material';
 import { Aroma } from '../components/degustation/aroma-circle/Aroma';
 // import data from '../components/degustation/diagram/d3-data.json';
@@ -13,7 +13,7 @@ const NewDegustation: NextPage = () => {
   const [pickedAromaNames, setPickedAromaNames] = useState<string[]>([]);
   const [showAlreadyPicked, setShowAlreadyPicked] = useState<boolean>(false);
 
-  const handlePickAroma = (aroma: Aroma) => {
+  const handlePickAroma = useCallback((aroma: Aroma) => {
     setPickedAromaNames((prevList) => {
       if (prevList.includes(aroma.name)) {
         setShowAlreadyPicked(true);
@@ -22,7 +22,7 @@ const NewDegustation: NextPage = () => {
 
       return [...prevList, aroma.name];
     });
-  };
+  }, [setPickedAromaNames, setShowAlreadyPicked]);
 
   const handleUnpickAroma = (removingAroma: string) => {
     setPickedAromaNames((prevList) => prevList.filter(

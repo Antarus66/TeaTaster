@@ -82,4 +82,4 @@ function findNodeColor(node: Node) {
   return 'lightgrey';
 }
 
-export default AromaCircle;
+export default React.memo(AromaCircle);
