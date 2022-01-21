@@ -1,28 +1,37 @@
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { Aroma, AromaSchema } from '../components/degustation/aroma-circle/Aroma';
+import { Aroma } from '../components/degustation/aroma-circle/Aroma';
 // import data from '../components/degustation/diagram/d3-data.json';
-import aromaAchema from '../aroma-schema.json';
+import aromaSchema from '../aroma-schema.json';
 import AromaList from '../components/degustation/aroma-list/AromaList';
 
 const AromaCircle = dynamic(() => import('../components/degustation/aroma-circle/AromaCircle'), { ssr: false });
 
 const NewDegustation: NextPage = () => {
-  const [pickedAroma, setPickedAroma] = useState<Aroma[]>([]);
+  const [pickedAromaNames, setPickedAromaNames] = useState<string[]>([]);
 
   const handlePickAroma = (aroma: Aroma) => {
-    setPickedAroma((prevList) => ([...prevList, aroma]));
+    setPickedAromaNames((prevList) => {
+      if (prevList.includes(aroma.name)) {
+        // todo: show a toaster "Already here!"
+        return prevList;
+      }
+
+      return [...prevList, aroma.name];
+    });
   };
 
-  const handleUnpickAroma = (aroma: Aroma) => {
-    console.log('unpick'); // todo: add unpicking logic
+  const handleUnpickAroma = (removingAroma: string) => {
+    setPickedAromaNames((prevList) => prevList.filter(
+      (item) => item !== removingAroma,
+    ));
   };
 
   return (
     <div>
-      <AromaCircle schema={aromaAchema} width={700} onPick={handlePickAroma}/>
-      <AromaList schema={aromaAchema} selected={pickedAroma} onUnselect={handleUnpickAroma}/>
+      <AromaCircle schema={aromaSchema} width={700} onPick={handlePickAroma}/>
+      <AromaList schema={aromaSchema} selected={pickedAromaNames} onUnselect={handleUnpickAroma}/>
     </div>
   );
 };
