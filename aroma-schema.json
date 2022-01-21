@@ -4,7 +4,7 @@
   "children": [
     {
       "name": "berries",
-      "color": "#a2d9a3",
+      "color": "#bc80bd",
       "children": [
         {
           "name": "raspberry"
@@ -34,7 +34,7 @@
     },
     {
       "name": "fruits",
-      "color": "#a2d9a3",
+      "color": "#eb6094",
       "children": [
         {
           "name": "sour",
@@ -100,7 +100,7 @@
     },
     {
       "name": "vegetables",
-      "color": "#a2d9a3",
+      "color": "#ebdc75",
       "children": [
         {
           "name": "raw",
@@ -140,7 +140,7 @@
     },
     {
       "name": "nuts/seeds",
-      "color": "#a2d9a3",
+      "color": "#c97d77",
       "children": [
         {
           "name": "Walnut"
@@ -170,7 +170,7 @@
     },
     {
       "name": "spices",
-      "color": "#a2d9a3",
+      "color": "#e7b75f",
       "children": [
         {
           "name": "vanilla"
@@ -203,7 +203,7 @@
     },
     {
       "name": "alco",
-      "color": "#a2d9a3",
+      "color": "#a15656",
       "children": [
         {
           "name": "madeira"
@@ -218,7 +218,7 @@
     },
     {
       "name": "flowers",
-      "color": "#a2d9a3",
+      "color": "#bebada",
       "children": [
         {
           "name": "rose"
