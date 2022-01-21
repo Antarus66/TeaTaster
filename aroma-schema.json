@@ -3,6 +3,409 @@
   "color": "lightgrey",
   "children": [
     {
+      "name": "berries",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "raspberry"
+        },
+        {
+          "name": "rowan"
+        },
+        {
+          "name": "currant"
+        },
+        {
+          "name": "gooseberry"
+        },
+        {
+          "name": "dog-rose"
+        },
+        {
+          "name": "dogwood"
+        },
+        {
+          "name": "cranberries"
+        },
+        {
+          "name": "guelder-rose"
+        }
+      ]
+    },
+    {
+      "name": "fruits",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "sour",
+          "children": [
+            {
+              "name": "lime-fruit"
+            },
+            {
+              "name": "lemon"
+            },
+            {
+              "name": "alicha"
+            },
+            {
+              "name": "bergamot"
+            }
+          ]
+        },
+        {
+          "name": "sweet",
+          "children": [
+            {
+              "name": "watermelon"
+            },
+            {
+              "name": "tropical-fruits"
+            },
+            {
+              "name": "fig"
+            },
+            {
+              "name": "cherry"
+            }
+          ]
+        },
+        {
+          "name": "dried",
+          "children": [
+            {
+              "name": "date"
+            },
+            {
+              "name": "raisin"
+            },
+            {
+              "name": "prunes"
+            },
+            {
+              "name": "dried-apricots"
+            },
+            {
+              "name": "apple"
+            },
+            {
+              "name": "pear"
+            },
+            {
+              "name": "fruit-stone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vegetables",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "raw",
+          "children": [
+            {
+              "name": "fresh-herbs"
+            },
+            {
+              "name": "green-peas"
+            },
+            {
+              "name": "zucchini"
+            },
+            {
+              "name": "pumpkin"
+            }
+          ]
+        },
+        {
+          "name": "cooked",
+          "children": [
+            {
+              "name": "roasted-chestnut"
+            },
+            {
+              "name": "boiled-peas"
+            },
+            {
+              "name": "sun-dried-tomato"
+            },
+            {
+              "name": "vegetable-grill"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nuts/seeds",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "Walnut"
+        },
+        {
+          "name": "pine-nut"
+        },
+        {
+          "name": "hazelnut"
+        },
+        {
+          "name": "almond"
+        },
+        {
+          "name": "sunflower-seeds"
+        },
+        {
+          "name": "pumpkin-seeds"
+        },
+        {
+          "name": "roasted-sesame-seeds"
+        },
+        {
+          "name": "nut-peel"
+        }
+      ]
+    },
+    {
+      "name": "spices",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "vanilla"
+        },
+        {
+          "name": "cinnamon"
+        },
+        {
+          "name": "muscat"
+        },
+        {
+          "name": "cardamom"
+        },
+        {
+          "name": "camphor"
+        },
+        {
+          "name": "menthol"
+        },
+        {
+          "name": "Bay-leaf"
+        },
+        {
+          "name": "tobacco"
+        },
+        {
+          "name": "pepper"
+        }
+      ]
+    },
+    {
+      "name": "alco",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "madeira"
+        },
+        {
+          "name": "cognac"
+        },
+        {
+          "name": "wine"
+        }
+      ]
+    },
+    {
+      "name": "flowers",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "rose"
+        },
+        {
+          "name": "clover"
+        },
+        {
+          "name": "dandelion"
+        },
+        {
+          "name": "lilac"
+        },
+        {
+          "name": "jasmine"
+        },
+        {
+          "name": "elderflower"
+        },
+        {
+          "name": "linden"
+        },
+        {
+          "name": "osmanthus"
+        },
+        {
+          "name": "field-bouquet"
+        }
+      ]
+    },
+    {
+      "name": "plant",
+      "color": "#a2d9a3",
+      "children": [
+        {
+          "name": "earthy",
+          "children": [
+            {
+              "name":  "sand"
+            },
+            {
+              "name":  "raw-earth"
+            },
+            {
+              "name":  "lime"
+            },
+            {
+              "name":  "dust"
+            }
+          ]
+        },
+        {
+          "name": "forest",
+          "children": [
+            {
+              "name":  "coal"
+            },
+            {
+              "name":  "ash"
+            },
+            {
+              "name":  "fireplace"
+            },
+            {
+              "name":  "moss"
+            },
+            {
+              "name":  "mushrooms"
+            }
+          ]
+        },
+        {
+          "name": "herbaceous",
+          "children": [
+            {
+              "name":  "mown-grass"
+            },
+            {
+              "name":  "bamboo"
+            },
+            {
+              "name":  "leaves"
+            },
+            {
+              "name":  "straw"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "color": "#ad8f81",
+      "children": [
+        {
+          "name": "paper"
+        },
+        {
+          "name": "tar"
+        },
+        {
+          "name": "resin"
+        },
+        {
+          "name": "needle"
+        },
+        {
+          "name": "eucalyptus"
+        },
+        {
+          "name": "sandal"
+        },
+        {
+          "name": "steamed-bath"
+        },
+        {
+          "name": "oak-barrel"
+        },
+        {
+          "name": "wet-wood"
+        },
+        {
+          "name": "heated-wood"
+        },
+        {
+          "name": "fresh-log"
+        }
+      ]
+    },
+    {
+      "name": "air",
+      "color": "#89c4cb",
+      "children": [
+        {
+          "name": "wind"
+        },
+        {
+          "name": "wet-asphalt"
+        },
+        {
+          "name": "snow-peak"
+        },
+        {
+          "name": "field-fog"
+        },
+        {
+          "name": "forest-fog"
+        }
+      ]
+    },
+    {
+      "name": "sea",
+      "color": "#4da3b1",
+      "children": [
+        {
+          "name": "fish"
+        },
+        {
+          "name": "algae"
+        },
+        {
+          "name": "salt"
+        }
+      ]
+    },
+    {
+      "name": "oxide",
+      "color": "#cb9b43",
+      "children": [
+        {
+          "name": "skin"
+        },
+        {
+          "name": "barn"
+        },
+        {
+          "name": "mildew"
+        },
+        {
+          "name": "fermentation"
+        },
+        {
+          "name": "metal"
+        }
+      ]
+    },
+    {
       "name": "chemical",
       "color": "#f78951",
       "children": [
@@ -100,162 +503,6 @@
         },
         {
           "name": "dark-honey"
-        }
-      ]
-    },
-    {
-      "name": "oxide",
-      "color": "#cb9b43",
-      "children": [
-        {
-          "name": "skin"
-        },
-        {
-          "name": "barn"
-        },
-        {
-          "name": "mildew"
-        },
-        {
-          "name": "fermentation"
-        },
-        {
-          "name": "metal"
-        }
-      ]
-    },
-    {
-      "name": "sea",
-      "color": "#4da3b1",
-      "children": [
-        {
-          "name": "fish"
-        },
-        {
-          "name": "algae"
-        },
-        {
-          "name": "salt"
-        }
-      ]
-    },
-    {
-      "name": "air",
-      "color": "#89c4cb",
-      "children": [
-        {
-          "name": "wind"
-        },
-        {
-          "name": "wet-asphalt"
-        },
-        {
-          "name": "snow-peak"
-        },
-        {
-          "name": "field-fog"
-        },
-        {
-          "name": "forest-fog"
-        }
-      ]
-    },
-    {
-      "name": "tree",
-      "color": "#ad8f81",
-      "children": [
-        {
-          "name": "paper"
-        },
-        {
-          "name": "tar"
-        },
-        {
-          "name": "resin"
-        },
-        {
-          "name": "needle"
-        },
-        {
-          "name": "eucalyptus"
-        },
-        {
-          "name": "sandal"
-        },
-        {
-          "name": "steamed-bath"
-        },
-        {
-          "name": "oak-barrel"
-        },
-        {
-          "name": "wet-wood"
-        },
-        {
-          "name": "heated-wood"
-        },
-        {
-          "name": "fresh-log"
-        }
-      ]
-    },
-    {
-      "name": "plant",
-      "color": "#a2d9a3",
-      "children": [
-        {
-          "name": "earthy",
-          "children": [
-            {
-              "name":  "sand"
-            },
-            {
-              "name":  "raw-earth"
-            },
-            {
-              "name":  "lime"
-            },
-            {
-              "name":  "dust"
-            }
-          ]
-        },
-        {
-          "name": "forest",
-          "children": [
-            {
-              "name":  "coal"
-            },
-            {
-              "name":  "ash"
-            },
-            {
-              "name":  "fireplace"
-            },
-            {
-              "name":  "moss"
-            },
-            {
-              "name":  "mushrooms"
-            }
-          ]
-        },
-        {
-          "name": "herbaceous",
-          "children": [
-            {
-              "name":  "mown-grass"
-            },
-            {
-              "name":  "bamboo"
-            },
-            {
-              "name":  "leaves"
-            },
-            {
-              "name":  "straw"
-            }
-          ]
         }
       ]
     }
