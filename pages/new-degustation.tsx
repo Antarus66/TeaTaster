@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Aroma, AromaSchema } from '../components/degustation/aroma-circle/Aroma';
 // import data from '../components/degustation/diagram/d3-data.json';
 import aromaAchema from '../aroma-schema.json';
-import AromaList from '../components/degustation/AromaList';
+import AromaList from '../components/degustation/aroma-list/AromaList';
 
 const AromaCircle = dynamic(() => import('../components/degustation/aroma-circle/AromaCircle'), { ssr: false });
 

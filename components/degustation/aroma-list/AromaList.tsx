@@ -1,7 +1,7 @@
 import React from 'react';
-import { Stack } from '@mui/material';
-import { Aroma, AromaSchema } from './aroma-circle/Aroma';
-import AromaListItem from './AromaListItem';
+import { Aroma, AromaSchema } from '../aroma-circle/Aroma';
+import AromaListItem from './item/AromaListItem';
+import styles from './AromaList.module.css';
 
 interface AromaListProps {
   schema: AromaSchema;
@@ -10,21 +10,20 @@ interface AromaListProps {
 }
 
 const AromaList: React.FC<AromaListProps> = ({ schema, selected, onUnselect }) => {
-  const getUnselectItemHandler = (item: Aroma) => () => onUnselect(item);
-
   const items = selected.map((item: Aroma) => ( // todo: make cursor pointer with styled components
     <AromaListItem key={item.name}
                    aroma={item}
                    schema={schema}
-                   onClick={getUnselectItemHandler(item)}
+                   className={styles.aromaItem}
+                   onClick={() => onUnselect(item)}
     />
   ));
 
   // todo: change the stack to a div
   return (
-    <Stack direction="row" spacing={1} justifyContent="center">
+    <div className={styles.container}>
       {items}
-    </Stack>
+    </div>
   );
 };
 
