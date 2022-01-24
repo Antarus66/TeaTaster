@@ -1,4 +1,8 @@
-export interface Composite<LeafType> {
+export interface RawComposite<T> {
+  children: Array<RawComposite<T> | T>;
+}
+
+export interface Composite<LeafType> extends RawComposite<LeafType>{
   id: string;
   children: Array<Composite<LeafType> | LeafType>;
   parent?: Composite<LeafType> | null;
