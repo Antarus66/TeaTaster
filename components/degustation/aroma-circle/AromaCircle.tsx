@@ -4,15 +4,15 @@ import * as d3 from 'd3';
 import { RGBColor } from 'd3-color';
 import { useTranslation } from 'react-i18next';
 import styles from './AromaCircle.module.css';
-import { Aroma, AromaSchema } from './Aroma';
+import { Aroma, AromaTree } from '../../../models/aroma/AromaTree';
 
 interface AromaCircleProps {
   width: number;
   onPick: (aroma: Aroma) => void;
-  schema: AromaSchema;
+  aromaTree: AromaTree;
 }
 
-const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, schema }) => {
+const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, aromaTree }) => {
   const chartRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
@@ -28,58 +28,54 @@ const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, schema }) => {
   ) {
     const myChart = Sunburst();
 
-    myChart.data(schema as Node)
+    myChart.data(aromaTree)
       .excludeRoot(true)
       .radiusScaleExponent(1.2)
       .labelOrientation('radial')
+      // @ts-ignore - the callback returns instance of the passed tree node
       .color(findNodeColor)
       .label((node: Node) => t(`aromas.${node.name}`))
       .maxLevels(2)
       // @ts-ignore - forcing the same segments size for leafs
       .size((node: Node): number | null => (node.children?.length ? null : 1))
+      // @ts-ignore - the callback returns instance of the passed tree node
       .onClick(nodeClickHandler)
       .width(width)
       .height(width)(anchor);
 
-    function nodeClickHandler(node: Node) {
+    function nodeClickHandler(node: Aroma | AromaTree) {
       if (!node) {
         return;
       }
 
-      // zoom only on parent nodes
-      if (node.children?.length) {
+      // zoom only on categories
+      if (node instanceof AromaTree) {
         myChart.focusOnNode(node);
         return;
       }
 
-      onPick({
-        name: node.name as string,
-      });
+      onPick(node);
     }
   }
 
   return <div className={styles.chartAnchor} ref={chartRef} style={{ width }}/>;
 };
 
-function findNodeColor(node: Node) {
-  if (node.color) {
+function findNodeColor(node: Aroma | AromaTree) {
+  if ((node instanceof AromaTree) && node.color) {
     return node.color;
   }
 
-  if (node.__dataNode?.parent) {
-    const parentColor: string = findNodeColor(node.__dataNode.parent.data);
-    const d3ParentColor = d3.color(parentColor) as RGBColor;
+  const parentColor = node.getColor();
+  const d3ParentColor = d3.color(parentColor) as RGBColor;
 
-    if (node.children?.length) {
-      d3ParentColor.opacity = 0.8;
-    } else {
-      d3ParentColor.opacity = 0.6;
-    }
-
-    return d3ParentColor.toString();
+  if (node instanceof AromaTree) {
+    d3ParentColor.opacity = 0.8;
+  } else {
+    d3ParentColor.opacity = 0.6;
   }
 
-  return 'lightgrey';
+  return d3ParentColor.toString();
 }
 
 export default React.memo(AromaCircle);

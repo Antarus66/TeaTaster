@@ -1,21 +1,19 @@
 import React from 'react';
-import { AromaSchema } from '../aroma-circle/Aroma';
 import AromaListItem from './item/AromaListItem';
 import styles from './AromaList.module.css';
+import { Aroma } from '../../../models/aroma/AromaTree';
 
 interface AromaListProps {
-  schema: AromaSchema;
-  selected: string[];
-  onUnselect: (itemName: string) => void;
+  selected: Aroma[];
+  onUnselect: (aroma: Aroma) => void;
 }
 
-const AromaList: React.FC<AromaListProps> = ({ schema, selected, onUnselect }) => {
-  const items = selected.map((itemName: string) => (
-    <AromaListItem key={itemName}
-                   aromaName={itemName}
-                   schema={schema}
+const AromaList: React.FC<AromaListProps> = ({ selected, onUnselect }) => {
+  const items = selected.map((selectedAroma: Aroma) => (
+    <AromaListItem key={selectedAroma.id}
+                   aroma={selectedAroma}
                    className={styles.aromaItem}
-                   onClick={() => onUnselect(itemName)}
+                   onClick={() => onUnselect(selectedAroma)}
     />
   ));
 
