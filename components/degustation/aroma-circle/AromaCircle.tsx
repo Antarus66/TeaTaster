@@ -58,7 +58,10 @@ const AromaCircle: React.FC<AromaCircleProps> = ({ width, onPick, aromaTree }) =
     }
   }
 
-  return <div className={styles.chartAnchor} ref={chartRef} style={{ width }}/>;
+  const paddingsWidth = 50;
+  const containerWidth = width + paddingsWidth;
+
+  return <div className={styles.chartAnchor} ref={chartRef} style={{ width: containerWidth }}/>;
 };
 
 function findNodeColor(node: Aroma | AromaTree) {
