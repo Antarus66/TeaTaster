@@ -2,7 +2,7 @@
 
 This is a simple pet-project for learning React.js.
 
-![Tea taster screenshot](tea-taster-screenshot.png "Tea taster screenshot").
+![Tea taster screenshot](tea-taster-screenshot.png "Tea taster screenshot")
 
 
 A project represents an aroma circle for Tea Ceremony. The circle is displayed as an interactive
@@ -16,9 +16,9 @@ can feel while tasting a Chinese tea.
 - Interactive Aroma diagram
 - List of picked aromas below
 
-## Used libs and technologies
+## Technologies and approaches
 
-Typescript, React.js, Next.js, Material UI, CSS Modules, auth-next, i18next, Docker. 
+Typescript, React.js, Next.js, Material UI, CSS Modules, auth-next for OAuth2, i18next, Docker, a D3-based plugin for diagram.
 
 ## Getting Started
 
